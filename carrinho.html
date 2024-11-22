@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniMercado</title>
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="carrinho.css">
 </head>
+<header>
+    <h1>MiniMercado</h1>
+    <div class="header">
+        <a href="index.html">Página Inicial</a>
+        <a href="frutasVerduras.html">Frutas e Verduras</a>
+        <a href="alimentos.html">Alimentos não perecíveis</a>
+        <a href="higieneLimpeza.html">Higiene e Limpeza</a>
+    </div>
+    <div>
+        <a id="carrinho" href="carrinho.html">Carrinho (<span id="cart-count">0</span>)</a>
+    </div>
+</header>
 <body>
-    <header>
-        <h1>MiniMercado</h1>
-        <div class="header">
-            <a href="index.html">Página Inicial</a>
-            <a href="frutasVerduras.html">Frutas e verduras</a>
-            <a href="alimentos.html">Alimentos não perecíveis</a>
-            <a href="higieneLimpeza.html">Higiene e Limpeza</a>
+    
+    <main>
+        <h1 id="titulo">Carrinho</h1>
+        <section id="principal">
+            <div id="cart-items"></div>
+            <div id="compra">
+                
+                <p>Selecione o método de retirada</p>
+                <select id="retirada">
+                    <option value="1">Retirada no local</option>
+                    <option value="2">Tele entrega</option>
+                </select>
+            <h3>Valor total: <span id="cart-total">R$ 0,00</span></h3>
         </div>
-        <div>
-            <a href="carrinho.html">Carrinho</a>
-        </div>
-    </header>
-    <body>
-        <h1>Carrinho</h1>
-        <div>
-            <p>Produtos adicionados</p>
-        </div>
-        <a href="index.html"><button>Continuar comprando</button></a>
-        <p>Selecione o método de retirada</p>
-        <select id="retirada">
-            <option value="1">Retirada no local</option>
-            <option value="2">Teleentrega (taxa de R$30,00)</option>
-        </select>
-        <p>Valor total: </p>
-        <a href="FinalizarCompra.html">Finalizar Compra</a>
-    </body>
+        </section>
+        <a id="continuarCompras" href="index.html">Continuar comprando</a>
+    </main>
+    
     <footer>
         <p>Feito por Adrian Fachi</p>
         <p>Contato: (51) 996105286</p>
     </footer>
+
+    <script src="carrinho.js"></script>
 </body>
 </html>

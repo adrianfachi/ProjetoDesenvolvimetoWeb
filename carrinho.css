@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    text-align: center;
+}
+
+#titulo {
+    padding: 50px;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-size: 2vw;
+}
+
+#principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+
+}
+
+
+
+#compra {
+    background-color: #d6e68a;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+#continuarCompras {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    border:1px solid #121310;
+    color: #121310;
+    background-color: #95aa61;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+main {
+    padding-bottom: 100px;
+}

@@ -4,39 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniMercado</title>
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="footerFixed.css">
 </head>
 <header>
     <h1>MiniMercado</h1>
     <div class="header">
         <a href="index.html">Página Inicial</a>
-        <a href="frutasVerduras.html">Frutas e verduras</a>
+        <a href="frutasVerduras.html">Frutas e Verduras</a>
         <a href="alimentos.html">Alimentos não perecíveis</a>
         <a href="higieneLimpeza.html">Higiene e Limpeza</a>
     </div>
     <div>
-        <a href="carrinho.html">Carrinho</a>
+        <a id="carrinho" href="carrinho.html">Carrinho (<span id="cart-count">0</span>)</a>
     </div>
 </header>
 <body>
-    <section class="higieneLimpeza">
-        <h2>Higiene e Limpeza</h2>
-        <div>
-            <img src="imagens/omo.jpg" alt="Sabão em pó" width="200px">
-            <p>Sabão em pó 1kg</p>
-            <p>R$16,90/un</p>
-            <a href="comprarUnidade.html"><button>Comprar</button></a>
+    <section id="higieneLimpeza" class="categorias">
+        <h2>Higiene e limpeza</h2>
+        <div class="imagensVendas">
+            <div class="item" data-id="5">
+                <img src="imagens/omo.jpg" alt="Sabão em pó" width="200px">
+                <p>Sabão em pó 1kg</p>
+                <p>R$16,90/un</p>
+                <button class="add-to-cart" data-name="omo" data-price="16.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="item" data-id="6">
+                <img src="imagens/sabonete.jpg" alt="Sabonete" width="200px">
+                <p>Sabonete</p>
+                <p>R$4,90/un</p>
+                <button class="add-to-cart" data-name="sabonete" data-price="4.90">Adicionar ao Carrinho</button>
+            </div>
         </div>
-        <div>
-            <img src="imagens/sabonete.jpg" alt="Sabonete" width="200px">
-            <p>Sabonete</p>
-            <p>R$4,90/un</p>
-            <a href="comprarUnidade.html"><button>Comprar</button></a>
-        </div>
-        <a href="higieneLimpeza.html"><button>Ver mais Produtos de Higiene e Limpeza</button></a>
     </section>
 </body>
 <footer>
     <p>Feito por Adrian Fachi</p>
     <p>Contato: (51) 996105286</p>
 </footer>
+<script src="carrinho.js"></script>
 </html>

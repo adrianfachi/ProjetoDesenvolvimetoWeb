@@ -1,57 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniMercado</title>
-</head>
-<body>
-    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniMercado</title>
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="footerFixed.css">
 </head>
 <header>
     <h1>MiniMercado</h1>
     <div class="header">
         <a href="index.html">Página Inicial</a>
-        <a href="frutasVerduras.html">Frutas e verduras</a>
+        <a href="frutasVerduras.html">Frutas e Verduras</a>
         <a href="alimentos.html">Alimentos não perecíveis</a>
         <a href="higieneLimpeza.html">Higiene e Limpeza</a>
     </div>
     <div>
-        <a href="carrinho.html">Carrinho</a>
+        <a id="carrinho" href="carrinho.html">Carrinho (<span id="cart-count">0</span>)</a>
     </div>
 </header>
-<body>
-    <section class="frutasVerduras">
-        <h2>Feutas e verduras</h2>
-        <div>
-            <img src="imagens/alface crespa.jpg" alt="Alface" width="200px">
-            <p>Alface Crespa</p>
-            <p>R$3,99/un</p>
-            <a href="comprarUnidade.html"><button>Comprar</button></a>
-        </div>
-        <div>
-            <img src="imagens/banana.jpg" alt="Banana" width="200px">
-            <p>Banana Prata</p>
-            <p>R$8,99/kg</p>
-            <a href="comprarKg.html"><button>Comprar</button></a>
-        </div>
-        <div>
-            <img src="imagens/maca.jpg" alt="Maça" width="200px">
-            <p>Maça</p>
-            <p>R$13,90/kg</p>
-            <a href="comprarKg.html"><button>Comprar</button></a>
+
+<main>
+    <section id="frutasVerduras" class="categorias">
+        <h2>Frutas e Verduras</h2>
+        <div class="imagensVendas">
+            <div class="item" data-id="1">
+                <img src="imagens/alface crespa.jpg" alt="Alface Crespa" width="200px">
+                <p>Alface Crespa</p>
+                <p>R$3,99/un</p>
+                <button class="add-to-cart" data-name="Alface Crespa" data-price="3.99">Adicionar ao Carrinho</button>
+            </div>
+            <div class="item" data-id="2">
+                <img src="imagens/maça.jpg" alt="Maça verde" width="200px">
+                <p>Maça</p>
+                <p>R$4,99/un</p>
+                <button class="add-to-cart" data-name="Maça" data-price="4,99">Adicionar ao Carrinho</button>
+            </div>
         </div>
     </section>
+</main>   
 </body>
 <footer>
     <p>Feito por Adrian Fachi</p>
     <p>Contato: (51) 996105286</p>
 </footer>
-</html>
-</body>
+<script src="carrinho.js"></script>
 </html>

@@ -4,71 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniMercado</title>
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="body.css">
 </head>
-<header>
-    <h1>MiniMercado</h1>
-    <div class="header">
-        <a href="index.html">Página Inicial</a>
-        <a href="frutasVerduras.html">Frutas e verduras</a>
-        <a href="alimentos.html">Alimentos não perecíveis</a>
-        <a href="higieneLimpeza.html">Higiene e Limpeza</a>
-    </div>
-    <div>
-        <a href="carrinho.html">Carrinho</a>
-    </div>
-</header>
 <body>
-    <section class="frutasVerduras">
-        <h2>Feutas e verduras</h2>
-        <div>
-            <img src="imagens/alface crespa.jpg" alt="Alface" width="200px">
-            <p>Alface Crespa</p>
-            <p>R$3,99/un</p>
-            <a href="comprarUnidade.html"><button>Comprar</button></a>
+    <header>
+        <h1>MiniMercado</h1>
+        <div class="header">
+            <a href="index.html">Página Inicial</a>
+            <a href="frutasVerduras.html">Frutas e Verduras</a>
+            <a href="alimentos.html">Alimentos não perecíveis</a>
+            <a href="higieneLimpeza.html">Higiene e Limpeza</a>
         </div>
         <div>
-            <img src="imagens/banana.jpg" alt="Banana" width="200px">
-            <p>Banana Prata</p>
-            <p>R$8,99/kg</p>
-            <a href="comprarKg.html"><button>Comprar</button></a>
+            <a id="carrinho" href="carrinho.html">Carrinho (<span id="cart-count">0</span>)</a>
         </div>
-        <a href="frutasVerduras.html"><button>Ver mais Frutas e verduras</button></a>
-    </section>
-    <section class="alimentosNaoPereciveis">
-        <h2>Alimentos não perecíveis</h2>
-        <div>
-            <img src="imagens/arroz.jpg" alt="Arroz" width="200px">
-            <p>Arroz 5kg</p>
-            <p>R$44,90/un</p>
-            <a href="comprarUnidade.html"><button>Comprar</button></a>
-        </div>
-        <div>
-            <img src="imagens/farinha.jpg" alt="Farinha" width="200px">
-            <p>Farinha de Trigo 5kg</p>
-            <p>R$14,90/un</p>
-            <a href="comprarUnidade.html"><button>Comprar</button></a>
-        </div>
-        <a href="alimentos.html"><button>Ver mais Alimentos não perecíveis</button></a>
-    </section>
-    <section class="higieneLimpeza">
-        <h2>Higiene e Limpeza</h2>
-        <div>
-            <img src="imagens/omo.jpg" alt="Sabão em pó" width="200px">
-            <p>Sabão em pó 1kg</p>
-            <p>R$16,90/un</p>
-            <a href="comprarUnidade.html"><button>Comprar</button></a>
-        </div>
-        <div>
-            <img src="imagens/sabonete.jpg" alt="Sabonete" width="200px">
-            <p>Sabonete</p>
-            <p>R$4,90/un</p>
-            <a href="comprarUnidade.html"><button>Comprar</button></a>
-        </div>
-        <a href="higieneLimpeza.html"><button>Ver mais Produtos de Higiene e Limpeza</button></a>
-    </section>
+    </header>
+
+    <main>
+        <section id="frutasVerduras" class="categorias">
+            <h2>Frutas e Verduras</h2>
+            <div class="imagensVendas">
+                <div class="item" data-id="1">
+                    <img src="imagens/alface crespa.jpg" alt="Alface Crespa" width="200px">
+                    <p>Alface Crespa</p>
+                    <p>R$3,99/un</p>
+                    <button class="add-to-cart" data-name="Alface Crespa" data-price="3.99">Adicionar ao Carrinho</button>
+                </div>
+                <div class="item" data-id="2">
+                    <img src="imagens/maça.jpg" alt="Maça verde" width="200px">
+                    <p>Maça</p>
+                    <p>R$4,99/un</p>
+                    <button class="add-to-cart" data-name="Maça" data-price="4,99">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="alimentosNaoPereciveis" class="categorias">
+            <h2>Alimentos não perecíveis</h2>
+            <div class="imagensVendas">
+                <div class="item" data-id="3">
+                    <img src="imagens/arroz.jpg" alt="Arroz 5kg" width="200px">
+                    <p>Arroz</p>
+                    <p>R$44,90/un</p>
+                    <button class="add-to-cart" data-name="Arroz" data-price="44.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="item" data-id="4">
+                    <img src="imagens/farinha.jpg" alt="Farinha de Trigo 5kg" width="200px">
+                    <p>Farinha</p>
+                    <p>R$14,90/un</p>
+                    <button class="add-to-cart" data-name="Farinha" data-price="14.90">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="higieneLimpeza" class="categorias">
+            <h2>Higiene e limpeza</h2>
+            <div class="imagensVendas">
+                <div class="item" data-id="5">
+                    <img src="imagens/omo.jpg" alt="Sabão em pó" width="200px">
+                    <p>Sabão em pó 1kg</p>
+                    <p>R$16,90/un</p>
+                    <button class="add-to-cart" data-name="omo" data-price="16.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="item" data-id="6">
+                    <img src="imagens/sabonete.jpg" alt="Sabonete" width="200px">
+                    <p>Sabonete</p>
+                    <p>R$4,90/un</p>
+                    <button class="add-to-cart" data-name="sabonete" data-price="4.90">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito por Adrian Fachi</p>
+        <p>Contato: (51) 996105286</p>
+    </footer>
+
+    <script src="carrinho.js"></script>
 </body>
-<footer>
-    <p>Feito por Adrian Fachi</p>
-    <p>Contato: (51) 996105286</p>
-</footer>
 </html>
